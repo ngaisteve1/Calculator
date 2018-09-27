@@ -10,9 +10,6 @@
     <link rel="stylesheet" type="text/css" href="/CalculatorAndroid.css">
 </head>
 
-
-
-
 <body onload="reset()">
     <h1>Android Calculator</h1>
     <div class="containerCal">
@@ -59,11 +56,6 @@
     </fieldset>
 
     <fieldset>
-        <legend>Design - Flow Chart</legend>
-
-    </fieldset>
-
-    <fieldset>
         <legend>Coding Techniques Used</legend>
         <ul>
             <li>Main function - one addEventListener to create for the 0-9 keys, decimal key and all four operator (+ - * /) keys event handlers are dynamically generated using foreach loop</li>
@@ -73,162 +65,6 @@
             <li>CSS Grid Layout</li>
             <li>More comment in the code.</li>
         </ul>
-    </fieldset>
-
-    <fieldset>
-        <legend>Source Code Summary</legend>
-        <ul>
-            <li>Total small functions: 5</li>
-            <li>Total anonymous functions: 2</li>
-            <li>Total lines of code: 83 (excluding comment)</li>
-        </ul>
-    </fieldset>
-
-    <fieldset>
-        <legend>Total Passed Test Cases: 15</legend>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3 col-xs-6">
-                    <h6>Test Case 1</h6>
-                    <ol>
-                        <li>Input: 1 or 2</li>
-                        <li>Input: + or - or * or /</li>
-                        <li>Input: 1 or 2</li>
-                        <li>Input: =</li>
-                    </ol>
-                </div>
-                <div class="col-sm-3 col-xs-6">
-                    <h6>Test Case 2</h6>
-                    <ol>
-                        <li>Input: 1 or 2</li>
-                        <li>Input: 1 or 2</li>
-                        <li>Input: + or - or * or /</li>
-                        <li>Input: 1 or 2</li>
-                        <li>Input: =</li>
-                    </ol>
-                </div>
-                <div class="col-sm-3 col-xs-6">
-                    <h6>Test Case 3</h6>
-                    <ol>
-                        <li>Input: + or - or * or /</li>
-                        <li>Input: 1 or 2</li>
-                        <li>Input: + or - or * or /</li>
-                        <li>Input: 1 or 2</li>
-                        <li>Input: =</li>
-                    </ol>
-                </div>
-                <div class="col-sm-3 col-xs-6">
-                    <h6>Test Case 4</h6>
-                    <ol>
-                        <li>Input: 1</li>
-                        <li>Input: + </li>
-                        <li>Input: 2</li>
-                        <li>Input: * </li>
-                        <li>Input: 2</li>
-                        <li>Input: =</li>
-                        <li>Output: 5 (not 6)</li>
-                    </ol>
-                </div>
-
-                <div class="col-sm-3 col-xs-6">
-                    <h6>Test Case 5</h6>
-                    <ol>
-                        <li>Input: 1 or 2</li>
-                        <li>Input: +</li>
-                        <li>Input: + (Not Allowed)</li>
-                    </ol>
-                </div>
-                <div class="col-sm-3 col-xs-6">
-                    <h6>Test Case 6</h6>
-                    <ol>
-                        <li>Input: 0</li>
-                        <li>Input: 1</li>
-                        <li>Output: 1</li>
-                    </ol>
-                </div>
-                <div class="col-sm-3 col-xs-6">
-                    <h6>Test Case 7</h6>
-                    <ol>
-                        <li>Input: 0</li>
-                        <li>Input: 0 (Not Allowed)</li>
-                        <li>Output: 0</li>
-                    </ol>
-                </div>
-                <div class="col-sm-3 col-xs-6">
-                    <h6>Test Case 8</h6>
-                    <ol>
-                        <li>Input: 1.1</li>
-                        <li>Input: +</li>
-                        <li>Input: 2.2</li>
-                        <li>Output: 3.3000000000000003</li>
-                    </ol>
-                </div>
-
-                <div class="col-sm-3 col-xs-6">
-                    <h6>Test Case 9</h6>
-                    <ol>
-                        <li>Input: .</li>
-                        <li>Output: 0.</li>
-                    </ol>
-                </div>
-                <div class="col-sm-3 col-xs-6">
-                    <h6>Test Case 10</h6>
-                    <ol>
-                        <li>Input: +</li>
-                        <li>Output: 0+</li>
-                    </ol>
-                </div>
-                <div class="col-sm-3 col-xs-6">
-                    <h6>Test Case 11</h6>
-                    <ol>
-                        <li>Input: =</li>
-                        <li>Output: 0</li>
-                    </ol>
-                </div>
-                <div class="col-sm-3 col-xs-6">
-                    <h6>Test Case 12</h6>
-                    <ol>
-                        <li>Input: 0</li>
-                        <li>Input: +</li>
-                        <li>Input: 0</li>
-                        <li>Input: 0</li>
-                        <li>Output: 0+0 (Not 0+00)</li>
-                    </ol>
-                </div>
-
-                <div class="col-sm-3 col-xs-6">
-                    <h6>Test Case 13</h6>
-                    <ol>
-                        <li>Input: 1</li>
-                        <li>Input: +</li>
-                        <li>Input: -</li>
-                        <li>Output: 1-</li>
-                    </ol>
-                </div>
-                <div class="col-sm-3 col-xs-6">
-                    <h6>Test Case 14</h6>
-                    <ol>
-                        <li>Input: 1</li>
-                        <li>Input: +</li>
-                        <li>Input: =</li>
-                        <li>Output: 1</li>
-                    </ol>
-                </div>
-                <div class="col-sm-3 col-xs-6">
-                    <h6>Test Case 15</h6>
-                    <ol>
-                        <li>Input: 1</li>
-                        <li>Input: - (or * or /)</li>
-                        <li>Input: 0</li>
-                        <li>Input: 0</li>
-                        <li>Output: 1-00 (Should be 1-0)</li>
-                    </ol>
-                </div>
-                <div class="col-sm-3 col-xs-6">
-
-                </div>
-            </div>
-        </div>
     </fieldset>
 </body>
 </html>
