@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>First Android Calculator with Javascript (Vanilla)</title>
+
+    <link rel="stylesheet" type="text/css" href="/CalculatorAndroid.css">
+</head>
+
+
+
+
+<body onload="reset()">
+    <h1>Android Calculator</h1>
+    <div class="containerCal">
+        <div class="item item-header1" id="expressionString"></div>
+        <div class="item item-header2" id="expressionResult"></div>
+
+        <input class="btn btnC" id="reset" type="button" value="C" onclick="reset()" />
+        <input class="btn" id="backKey" type="button" value="<<" onclick="removeLastChar()" />
+        <input class="btn" id="operatorDivide" type="button" value="/" />
+        <input class="btn" id="operatorMultiply" type="button" value="*" />
+
+        <input class="btn" id="number9" type="button" value="9" />
+        <input class="btn" id="number8" type="button" value="8" />
+        <input class="btn" id="number7" type="button" value="7" />
+        <input class="btn" id="operatorMinus" type="button" value="-" />
+
+        <input class="btn" id="number6" type="button" value="6" />
+        <input class="btn" id="number5" type="button" value="5" />
+        <input class="btn" id="number4" type="button" value="4" />
+        <input class="btn" id="operatorPlus" type="button" value="+" />
+
+        <input class="btn" id="number3" type="button" value="3" />
+        <input class="btn" id="number2" type="button" value="2" />
+        <input class="btn" id="number1" type="button" value="1" />
+        <input class="btn orange equal" id="Submit1" type="button" value="=" onclick="evaluationExpression(this.value, false)" />
+
+        <input class="btn" id="number0" type="button" value="0" />
+        <input class="btn" id="decimal" type="button" value="." />
+        <input class="btn" id="" type="button" value="" />
+
+    </div>
+
+    <p></p>
+
+    <fieldset>
+        <legend>Features</legend>
+        <ol>
+            <li>Display temporary result while entering number</li>
+            <li>Accept number 0-9 key, decimal and four math operator keys</li>
+            <li>Back key</li>
+            <li>Keep appending string calculation like in Android stock calculator. Example, 1+2*2 </li>
+            <li>Order of calculation is BODMAS. Example, 1+2*2=5 (not 6). For Window calculator, result is 6.</li>
+        </ol>
+    </fieldset>
+
+    <fieldset>
+        <legend>Design - Flow Chart</legend>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Coding Techniques Used</legend>
+        <ul>
+            <li>Main function - one addEventListener to create for the 0-9 keys, decimal key and all four operator (+ - * /) keys event handlers are dynamically generated using foreach loop</li>
+            <li>Some Javascript built-in function used: eval(), split(), includes()</li>
+            <li>Regular expression - RegExp Object</li>
+            <li>Main Design Ideas: Check key and set key type. Check and set last number string.</li>
+            <li>CSS Grid Layout</li>
+            <li>More comment in the code.</li>
+        </ul>
+    </fieldset>
+
+    <fieldset>
+        <legend>Source Code Summary</legend>
+        <ul>
+            <li>Total small functions: 5</li>
+            <li>Total anonymous functions: 2</li>
+            <li>Total lines of code: 83 (excluding comment)</li>
+        </ul>
+    </fieldset>
+
+    <fieldset>
+        <legend>Total Passed Test Cases: 15</legend>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 1</h6>
+                    <ol>
+                        <li>Input: 1 or 2</li>
+                        <li>Input: + or - or * or /</li>
+                        <li>Input: 1 or 2</li>
+                        <li>Input: =</li>
+                    </ol>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 2</h6>
+                    <ol>
+                        <li>Input: 1 or 2</li>
+                        <li>Input: 1 or 2</li>
+                        <li>Input: + or - or * or /</li>
+                        <li>Input: 1 or 2</li>
+                        <li>Input: =</li>
+                    </ol>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 3</h6>
+                    <ol>
+                        <li>Input: + or - or * or /</li>
+                        <li>Input: 1 or 2</li>
+                        <li>Input: + or - or * or /</li>
+                        <li>Input: 1 or 2</li>
+                        <li>Input: =</li>
+                    </ol>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 4</h6>
+                    <ol>
+                        <li>Input: 1</li>
+                        <li>Input: + </li>
+                        <li>Input: 2</li>
+                        <li>Input: * </li>
+                        <li>Input: 2</li>
+                        <li>Input: =</li>
+                        <li>Output: 5 (not 6)</li>
+                    </ol>
+                </div>
+
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 5</h6>
+                    <ol>
+                        <li>Input: 1 or 2</li>
+                        <li>Input: +</li>
+                        <li>Input: + (Not Allowed)</li>
+                    </ol>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 6</h6>
+                    <ol>
+                        <li>Input: 0</li>
+                        <li>Input: 1</li>
+                        <li>Output: 1</li>
+                    </ol>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 7</h6>
+                    <ol>
+                        <li>Input: 0</li>
+                        <li>Input: 0 (Not Allowed)</li>
+                        <li>Output: 0</li>
+                    </ol>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 8</h6>
+                    <ol>
+                        <li>Input: 1.1</li>
+                        <li>Input: +</li>
+                        <li>Input: 2.2</li>
+                        <li>Output: 3.3000000000000003</li>
+                    </ol>
+                </div>
+
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 9</h6>
+                    <ol>
+                        <li>Input: .</li>
+                        <li>Output: 0.</li>
+                    </ol>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 10</h6>
+                    <ol>
+                        <li>Input: +</li>
+                        <li>Output: 0+</li>
+                    </ol>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 11</h6>
+                    <ol>
+                        <li>Input: =</li>
+                        <li>Output: 0</li>
+                    </ol>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 12</h6>
+                    <ol>
+                        <li>Input: 0</li>
+                        <li>Input: +</li>
+                        <li>Input: 0</li>
+                        <li>Input: 0</li>
+                        <li>Output: 0+0 (Not 0+00)</li>
+                    </ol>
+                </div>
+
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 13</h6>
+                    <ol>
+                        <li>Input: 1</li>
+                        <li>Input: +</li>
+                        <li>Input: -</li>
+                        <li>Output: 1-</li>
+                    </ol>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 14</h6>
+                    <ol>
+                        <li>Input: 1</li>
+                        <li>Input: +</li>
+                        <li>Input: =</li>
+                        <li>Output: 1</li>
+                    </ol>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <h6>Test Case 15</h6>
+                    <ol>
+                        <li>Input: 1</li>
+                        <li>Input: - (or * or /)</li>
+                        <li>Input: 0</li>
+                        <li>Input: 0</li>
+                        <li>Output: 1-00 (Should be 1-0)</li>
+                    </ol>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</body>
+</html>
+
+<script>
+
+    var keys = document.querySelectorAll("#decimal, #number0, #number1, #number2, #number3, #number4, #number5, #number6, #number7, #number8, #number9, #operatorPlus, #operatorMinus, #operatorMultiply, #operatorDivide");
+
+    var expString = document.getElementById('expressionString');
+    var expResult = document.getElementById('expressionResult');
+    var lastNumString = "";
+    var numberType;
+
+    // design notes: reason to have just one dynamic addeventlistener is reduce repeat checking for numbers and operator keys.
+    keys.forEach(function (elem) {
+        elem.addEventListener("click", function (event) {
+            debugger;
+
+            // 1. Check each entered key and set key type.
+            switch (event.target.value) {
+                case "0":
+                    keyType = "zero";
+                    break;
+                case "1":
+                case "2":
+                case "3":
+                case "4":
+                case "5":
+                case "6":
+                case "7":
+                case "8":
+                case "9":
+                    keyType = "number1-9";
+                    break;
+                case ".":
+                    keyType = "decimal";
+                    break;
+                case "+":
+                case "-":
+                case "*":
+                case "/":
+                    keyType = "operator";
+                    break;
+                default:
+                    break;
+            }
+
+            // 2. Check key type first.
+            // 3. Check last number string for each key type.
+            switch (keyType) {
+                case "number1-9":
+                    if (lastNumString == "0") {
+                        expString.innerHTML = replaceLastCharString((expString.innerHTML), event.target.value);
+                    } else {
+                        expString.innerHTML += event.target.value; // append
+                    }
+
+                    lastNumString = lastNumberString(expString.innerHTML);
+                    break;
+                case "zero":
+                    if (lastNumString == "0") {
+                        console.log("Do nothing. Should not show 00.");
+                    } else {
+                        expString.innerHTML += event.target.value; // append
+                    }
+
+                    lastNumString = lastNumberString(expString.innerHTML);
+                    break;
+                case "decimal":
+                    if (lastNumString == "") {
+                        expString.innerHTML += "0."; // append
+                    } else {
+                        //if not extra decimal then append. else do nothing.
+                        if (lastNumString.includes(".") && event.target.value == ".") {
+                            console.log('Do nothing. Reason: Prevent more than one decimal.');
+                        } else {
+                            expString.innerHTML += event.target.value; // append
+                        }
+                    }
+
+                    lastNumString = lastNumberString(expString.innerHTML);
+                    break;
+                case "operator":
+                    if (lastNumString == "") {
+                        expString.innerHTML += "0" + event.target.value; // append leading zero.
+                    }
+                    else {
+                        if (isLastCharAnOperator(expString.innerHTML)) {
+                            expString.innerHTML = replaceLastCharString((expString.innerHTML), event.target.value);
+                        } else {
+                            expString.innerHTML += event.target.value; // append
+                        }
+                    }
+
+                    lastNumString = "";
+                    break;
+                default:
+                    console.log("Uncaught exception.");
+                    break;
+            }
+
+            evaluationExpression(expString.innerHTML, true);
+        });
+    });
+
+    function lastNumberString(str) {
+        let separators = [' ', '\\\+', '-', '\\\(', '\\\)', '\\*', '/', ':', '\\\?'];
+        console.log(separators.join('|'));
+        let result = str.split(new RegExp(separators.join('|'), 'g'));
+        console.log(result[result.length - 1]);
+        return result[result.length - 1];
+    }
+
+    function replaceLastCharString(str, char) {
+        // optional technique: StringUtils.chop(str);
+        // remarks substring method is not null-safe.
+        let xStr = str.substring(0, str.length - 1);
+        return xStr + char;
+    }
+
+    function isLastCharAnOperator(str) {
+        var isLastCharOperator = false;
+        var lastChar = str.substring(str.length - 1);
+        var operators = ["+", "-", "*", "/",];
+
+        for (x = 0; x < operators.length - 1; x++) {
+            if (lastChar == operators[x]) {
+                isLastCharOperator = true;
+                break;
+            }
+        }
+        return isLastCharOperator;
+    }
+
+    function removeLastChar() {
+        debugger;
+
+        expString.innerHTML = expString.innerHTML.substring(0, expString.innerHTML.length - 1);
+
+        //expResult.innerHTML = (expString.innerHTML == "") ? "0" : evaluationExpression(temp, true);
+        if (expString.innerHTML == "") {
+            reset();
+        } else {
+            evaluationExpression(expString.innerHTML, true)
+        }
+    }
+
+    function reset() {
+        expResult.innerHTML = 0;
+        expString.innerHTML = "";
+        lastNumString = "";
+    }
+
+    function evaluationExpression(operator, isTemp) {
+        debugger;
+
+        if (!isTemp) {
+            if (isLastCharAnOperator(expString.innerHTML)) {
+                expString.innerHTML = expString.innerHTML.slice(0, -1);
+                debugger;
+            }
+        }
+
+        if (eval(expString.innerHTML) == null) { // if user key in equal "=" as first key.
+            expResult.innerHTML = "0";
+        } else {
+            expResult.innerHTML = eval(expString.innerHTML);
+        }
+
+        if (!isTemp) {
+            expString.innerHTML = "";
+            lastNumString = "";
+            document.getElementById('expressionResult').style.color = "white";
+            document.getElementById('expressionResult').style.fontSize = "50px";
+        } else {
+            document.getElementById('expressionResult').style.color = "gray";
+            document.getElementById('expressionResult').style.fontSize = "30px";
+        }
+
+    }
+
+</script>
