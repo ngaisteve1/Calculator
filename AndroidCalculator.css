@@ -1,0 +1,67 @@
+.containerCal {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 80px 80px 80px 80px;
+    grid-template-rows: 40px 80px;
+    grid-template-areas: "header header header header" "header header header header" "main main main main" "main main main main" "main main main main" "main main main main" "main main main main";
+    border: 1px solid black;
+    max-width: 320px;
+    margin: 0 auto;
+    background-color: black;
+    padding: 0px;
+}
+
+.item-header1 {
+    grid-area: header;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    background-color: black;
+    color: silver;
+    text-align: right;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.item-header2 {
+    grid-area: header;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    background-color: black;
+    color: white;
+    text-align: right;
+    font-size: 50px;
+    padding: 10px;
+}
+
+.equal {
+    grid-column-start: 4;
+    grid-row-start: 6;
+    grid-row-end: span 2;
+}
+
+/* Some hover effects */
+.btn:hover {
+    background-color: yellow;
+    cursor: pointer;
+    color: black;
+}
+
+.btn {
+    font-size: 150%;
+    background-color: whitesmoke;
+    border: none;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    margin: 1px;
+    border-radius: 1%;
+    font-weight: bold;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.btnC {
+    color: red;
+}
