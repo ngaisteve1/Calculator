@@ -10,4 +10,4 @@ Features:
 6. Percentage key (coming soon)
 
 Bugs & Feedback
-To report bugs, please create a [GitHub issue](https://github.com/ngaisteve1/calculator/issues) or [contact me for feedback] (http://www.findingsteve.net/steve-ngai/).
+To report bugs, please create a [GitHub issue](https://github.com/ngaisteve1/calculator/issues) or [contact me for feedback](http://www.findingsteve.net/steve-ngai/).
