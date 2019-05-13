@@ -1,4 +1,4 @@
-# Calculator using Javascript
+# Calculator using Javascript :heavy_multiplication_x:
 First Simple Calculator with Javascript
 
 ### [Try it out](http://js.findingsteve.net/BlackJack.cshtml)
