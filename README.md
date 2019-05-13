@@ -1,4 +1,4 @@
-# Calculator using Javascript :heavy_multiplication_x:
+# Calculator using Javascript  :heavy_plus_sign: ➖ :heavy_minus_sign: :heavy_multiplication_x: :heavy_division_sign:
 First Simple Calculator with Javascript
 
 ### [Try it out](http://js.findingsteve.net/BlackJack.cshtml)
