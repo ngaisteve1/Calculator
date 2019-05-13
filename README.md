@@ -1,16 +1,35 @@
-# androidcalculator
+# Calculator using Javascript
 First Simple Calculator with Javascript
 
-Features:
-1. Display temporary result while entering number
-2. Accept number 0-9 key, decimal and four math operator keys
-3. Back key
-4. Keep appending string calculation like in Android stock calculator. Example, 1+2*2
-5. Order of calculation is BODMAS. Example, 1+2*2=5 (not 6). For Window calculator, result is 6.
-6. Percentage key (coming soon)
+### [Try it out](http://js.findingsteve.net/BlackJack.cshtml)
 
+### Software Development Summary
+- Technology: Javascript, HTML, CSS
+- Javascript Library: None
+- IDE: Visual Studio
+- Paradigm or pattern of programming: Object-Oriented Programming (OOP) and Functional Programming
+- Data: Data of this demo program are stored using object.
 
+### Features:
+- [x] Display temporary result while entering number
+- [x] Accept number 0-9 key, decimal and four math operator keys
+- [x] Back key
+- [x] Keep appending string calculation like in Android stock calculator. Example, 1+2*2
+- [x] Order of calculation is BODMAS. Example, 1+2*2=5 (not 6). For Window calculator, result is 6.
+- [x] Look and feel like Android stock calculator.
+- [ ] Percentage key (coming soon)
 
-Bugs & Feedback
+### Coding Techniques:
+- Main function - One addEventListener for the 0-9 keys, decimal key and all four operator (+ - * /) keys are dynamically generated using - - foreach loop
+- Some Javascript built-in function used: eval(), split(), includes()
+- Main Design Ideas: Check key type and last number string.
+- CSS Grid Layout
+
+### Bugs & Feedback
 
 To report bugs, please create a [GitHub issue](https://github.com/ngaisteve1/calculator/issues) or [contact me for feedback](http://www.findingsteve.net/steve-ngai/).
+
+### Video Demo
+- [Javascript Calculator Demo Video](https://youtu.be/BSywP9Uoub8)
+
+[If this content is helpful to you, consider to support and buy me a cup of coffee :) ](https://ko-fi.com/V7V2PN67)
