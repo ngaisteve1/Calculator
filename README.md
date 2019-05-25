@@ -1,7 +1,7 @@
 # Calculator using Javascript  :heavy_plus_sign: :heavy_minus_sign: :heavy_multiplication_x: :heavy_division_sign:
 First Simple Calculator with Javascript
 
-### [Try it out](http://js.findingsteve.net/BlackJack.cshtml)
+### [Try it out](https://ngaisteve1.github.io/calculator/AndroidCalculator.html)
 
 ### Software Development Summary
 - Technology: Javascript, HTML, CSS
