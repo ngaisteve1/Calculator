@@ -9,6 +9,7 @@ First Simple Calculator with Javascript
 - IDE: Visual Studio
 - Paradigm or pattern of programming: Object-Oriented Programming (OOP) and Functional Programming
 - Data: Data of this demo program are stored using object.
+- [Development Process](http://js.findingsteve.net/CalculatorAndroidDevLog.cshtml)
 
 ### Features:
 - [x] Display temporary result while entering number
