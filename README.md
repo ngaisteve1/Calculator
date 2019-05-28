@@ -31,6 +31,9 @@ First Simple Calculator with Javascript
 To report bugs, please create a [GitHub issue](https://github.com/ngaisteve1/calculator/issues) or [contact me for feedback](http://www.findingsteve.net/steve-ngai/).
 
 ### Video Demo
-- [Javascript Calculator Demo Video](https://youtu.be/BSywP9Uoub8)
+- [Javascript Calculator Showcase Video](https://youtu.be/BSywP9Uoub8)
+
+### Other Versions
+- [Calculator with WPF](https://github.com/ngaisteve1/CalculatorWPF)
 
 [If this content is helpful to you, consider to support and buy me a cup of coffee :) ](https://ko-fi.com/V7V2PN67)
