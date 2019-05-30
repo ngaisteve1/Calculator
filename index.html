@@ -11,7 +11,7 @@
 </head>
 
 <body onload="reset()">
-    <h1>Android Calculator</h1>
+    <h1>Simple JS Calculator (Developed by Steve Ngai)</h1>
     <div class="containerCal">
         <div class="item item-header1" id="expressionString"></div>
         <div class="item item-header2" id="expressionResult"></div>
@@ -41,31 +41,6 @@
         <input class="btn" id="" type="button" value="" />
 
     </div>
-
-    <p></p>
-
-    <fieldset>
-        <legend>Features</legend>
-        <ol>
-            <li>Display temporary result while entering number</li>
-            <li>Accept number 0-9 key, decimal and four math operator keys</li>
-            <li>Back key</li>
-            <li>Keep appending string calculation like in Android stock calculator. Example, 1+2*2 </li>
-            <li>Order of calculation is BODMAS. Example, 1+2*2=5 (not 6). For Window calculator, result is 6.</li>
-        </ol>
-    </fieldset>
-
-    <fieldset>
-        <legend>Coding Techniques Used</legend>
-        <ul>
-            <li>Main function - one addEventListener to create for the 0-9 keys, decimal key and all four operator (+ - * /) keys event handlers are dynamically generated using foreach loop</li>
-            <li>Some Javascript built-in function used: eval(), split(), includes()</li>
-            <li>Regular expression - RegExp Object</li>
-            <li>Main Design Ideas: Check key and set key type. Check and set last number string.</li>
-            <li>CSS Grid Layout</li>
-            <li>More comment in the code.</li>
-        </ul>
-    </fieldset>
 </body>
 </html>
 <script src="AndroidCalculator.js"></script>
