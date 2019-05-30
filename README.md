@@ -1,7 +1,7 @@
 # JS Calculator (V1)  :heavy_plus_sign: :heavy_minus_sign: :heavy_multiplication_x: :heavy_division_sign:
 Simple Calculator with Javascript (Version 1)
 
-### [Try it out](https://ngaisteve1.github.io/calculator/)
+### [Try it out](https://ngaisteve1.github.io/Calculator/)
 
 ### Software Development Summary
 - Technology: Javascript, HTML, CSS
