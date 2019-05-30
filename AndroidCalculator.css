@@ -1,3 +1,7 @@
+h1{
+    text-align:center;
+}
+
 .containerCal {
     display: grid;
     justify-content: center;
